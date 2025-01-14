@@ -5,9 +5,13 @@
 DrawableActor::DrawableActor(const char* image)
 	: Actor(), image(nullptr)
 {
+	// 전달받은 문자열 복사.
 	auto length = strlen(image) + 1;
 	this->image = new char[length];
 	strcpy_s(this->image, length, image);
+
+	// 너비 설정.
+	width = (int)strlen(image);
 }
 
 DrawableActor::~DrawableActor()
