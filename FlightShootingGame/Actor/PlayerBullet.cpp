@@ -1,11 +1,11 @@
 #include "PlayerBullet.h"
 #include <cmath>
 
-PlayerBullet::PlayerBullet(const Vector2& Position)
+PlayerBullet::PlayerBullet(const Vector2& position)
 	: DrawableActor("!")
 {
 	// 탄약 위치 설정.
-	this->position = Position;
+	this->position = position;
 	yPosition = (float)position.y;
 }
 
